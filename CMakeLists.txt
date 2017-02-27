@@ -27,7 +27,16 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANG OR
     endif()
 endif()
 
-file(GLOB TEST_SOURCES "*.cxx")
+#FastRTPS Gen Codes Source
+file(GLOB GEN_SOURCE ${PROJECT_SOURCE_DIR}/gen/*.cxx)
 
-add_executable(fastrtps_test ${TEST_SOURCES})
-target_link_libraries(fastrtps_test fastrtps fastcdr)
+include_directories(
+	${PROJECT_SOURCE_DIR}/lib
+)
+
+#Generate executable for Generated sample codes
+add_executable(app ${GEN_SOURCE})
+target_link_libraries(app fastrtps fastcdr)
+
+#Generate executable for main app
+add_executable(main src/main.cpp)
