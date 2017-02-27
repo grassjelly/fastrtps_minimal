@@ -4,4 +4,4 @@ rm -rf gen
 mkdir gen
 cd gen
 
-fastrtpsgen -example x64Linux2.6gcc ../idl/HelloWorld.idl
+fastrtpsgen -example x64Linux2.6gcc ../idl/*.idl
