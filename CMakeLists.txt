@@ -8,12 +8,11 @@ execute_process(
 )
 
 # Find requirements
-set(fastcdr_DIR "$ENV{FASTRTPS_INSTALL_DIR}/fastcdr/cmake")
-set(fastrtps_DIR "$ENV{FASTRTPS_INSTALL_DIR}/fastrtps/cmake")
+set(fastcdr_DIR "$ENV{FASTRTPSHOME}/build/install/lib/fastcdr/cmake")
+set(fastrtps_DIR "$ENV{FASTRTPSHOME}/build/install/lib/fastrtps/cmake")
 
 find_package(fastrtps REQUIRED)
 find_package(fastcdr REQUIRED)
-
 
 # Set C++11
 include(CheckCXXCompilerFlag)
