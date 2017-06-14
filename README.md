@@ -18,7 +18,7 @@ fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl
 ```
 
 ### Making Executable
-Write CMakeList.txt and Makefile
+Make sure CMakeList.txt is correct 
 ```
 rm -rf build
 mkdir build
@@ -26,6 +26,17 @@ cd build
 cmake ..
 make
 ```
+
+### Running Executable
+```
+./app publisher
+```
+On new terminal
+```
+./app subscriber
+```
+
 ### Documentation
 * fastrtps (https://github.com/grassjelly/Fast-RTPS)
 * fastrtps_minimal (https://github.com/grassjelly/fastrtps_minimal)
+* tutorial (https://youtu.be/JW9yWhekpW4)
