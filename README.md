@@ -10,15 +10,22 @@ struct HelloWorld
 
 On Linux:
 ```
+rm -rf gen
+mkdir gen
+cd gen
+
 fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl
 ```
 
-### Adding Environment for fastrtps and fastcdr
+### Making Executable
+Write CMakeList.txt and Makefile
 ```
-set(fastcdr_DIR "$ENV{FASTRTPSHOME}/build/install/lib/fastcdr/cmake")
-set(fastrtps_DIR "$ENV{FASTRTPSHOME}/build/install/lib/fastrtps/cmake")
+rm -rf build
+mkdir build
+cd build
+cmake ..
+make
 ```
-
 ### Documentation
 * fastrtps (https://github.com/grassjelly/Fast-RTPS)
 * fastrtps_minimal (https://github.com/grassjelly/fastrtps_minimal)
