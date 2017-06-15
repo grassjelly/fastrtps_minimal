@@ -37,6 +37,7 @@ On new terminal
 ```
 
 ### Documentation
+* fastrtps get-started (http://eprosima-fast-rtps.readthedocs.io/en/latest/introduction.html0)
 * fastrtps (https://github.com/grassjelly/Fast-RTPS)
 * fastrtps_minimal (https://github.com/grassjelly/fastrtps_minimal)
 * tutorial (https://youtu.be/JW9yWhekpW4)
