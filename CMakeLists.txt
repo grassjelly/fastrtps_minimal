@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 2.8.12)
 project("fastrtps_test")
 
-# Generate Codes
+# srcerate Codes
 execute_process(
-	COMMAND ./gen.sh
+	COMMAND ./src.sh
 	WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
 
@@ -26,16 +26,16 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANG OR
     endif()
 endif()
 
-#FastRTPS Gen Codes Source
-file(GLOB GEN_SOURCE ${PROJECT_SOURCE_DIR}/gen/*.cxx)
+#FastRTPS src Codes Source
+file(GLOB src_SOURCE ${PROJECT_SOURCE_DIR}/src/*.cxx)
 
 include_directories(
+    include
 	${PROJECT_SOURCE_DIR}/lib
 )
 
-#Generate executable for Generated sample codes
-add_executable(app ${GEN_SOURCE})
+#srcerate executable for srcerated sample codes
+add_executable(app ${src_SOURCE})
 target_link_libraries(app fastrtps fastcdr)
 
-#Generate executable for main app
-add_executable(main src/main.cpp)
+
