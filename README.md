@@ -1,33 +1,23 @@
 ### Building application
-To build minimal application, first define the topic
+To build minimal application, first define the topic and its type
 ```
-// HelloWorld.idl
-struct HelloWorld
+struct app
 {
-    string msg;
+    type topic;
 };
 ```
 
-On Linux:
+First time build:
 ```
-rm -rf gen
-mkdir gen
-cd gen
-
-fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl
+$ ./build.sh
 ```
-
-### Making Executable
-Make sure CMakeList.txt is correct 
+Subsequent compile:
 ```
-rm -rf build
-mkdir build
-cd build
-cmake ..
-make
+$ ./compile.sh
 ```
 
 ### Running Executable
+Change directory to build directory
 ```
 ./app publisher
 ```
