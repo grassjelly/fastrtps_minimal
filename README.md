@@ -12,7 +12,6 @@ First time build:
 $ ./build.sh
 ```
 Subsequent compile:
-Remove build folder
 ```
 $ ./compile.sh
 ```
