@@ -21,11 +21,11 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANG OR
 endif()
 
 #FastRTPS App Source Codes
-file(GLOB MAIN_SOURCE ${PROJECT_SOURCE_DIR}/src/*.cxx)
+file(GLOB MAIN_SOURCE src/*.cxx)
 
 include_directories(
     include
-	${PROJECT_SOURCE_DIR}/lib
+	lib
 )
 
 #generate executable for the app
